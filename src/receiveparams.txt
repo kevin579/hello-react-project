@@ -1,0 +1,15 @@
+1. Params
+    Pass: /url/arg1/arg2
+    Receive: url/:param1/:param2
+    Use: const {param1,param2} = this.props.match.params
+
+2. Search
+    Pass: /url/?name1=arg1&name2=arg2
+    No need to Receive
+    Use: const {search} = this.props.location
+        const {name1,name2} = qs.parse(search.slice(1))
+
+3. State
+    Pass: Link to={{path:'url'},state:{name1:arg1,name2:arg2}}
+    No need to Receive
+    Use: this.props.location.state
