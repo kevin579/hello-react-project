@@ -1,39 +1,15 @@
 import React, { Component } from 'react'
-import {NavLink,Route,Switch,Redirect} from 'react-router-dom'
-import About from './component/About/index'
-import Home from './component/Home/index'
-
-import MyNavLink from '../src/Item/MyNavLink'
-
-
+import {Button} from 'antd'
+import {StepBackwardOutlined,WindowsOutlined} from '@ant-design/icons' 
 export default class App extends Component {
   render() {
     return (
-      <div className='container'>
-        <div >
-          <h1>Hello</h1>
-          {/* <a href="./about.html">About</a>
-          <br />
-          <a href="./home.html">Home</a> */}
-          <div className="list-group">
-            {/* <NavLink className="list-group-item" to = "/about">About</NavLink>
-            <NavLink className="list-group-item" to = "/home">Home</NavLink> */}
-            <MyNavLink to = '/about'>About</MyNavLink>
-            <MyNavLink to = '/home'>Home</MyNavLink>
-          </div>
-            
-          
-          
-        </div>
-        
-        <div>
-        <Switch>
-          <Route path="/about" component={About}></Route>
-          <Route path="/home" component={Home}></Route>
-          <Redirect to ="/home"/>
-        </Switch>
-          
-        </div>   
+      <div>
+        <Button type='primary' icon = {<StepBackwardOutlined/> }>Button 1</Button>
+        <Button type='link'>Button 2</Button>
+        <Button>Button 3</Button>
+        <StepBackwardOutlined />
+        <WindowsOutlined />
       </div>
     )
   }
