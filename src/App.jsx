@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
-import store from './redux/store'
-import Content from './container/Count/index'
+import Header from './components/header'
+import Body from './container/body'
+
 export default class App extends Component {
   render() {
     return (
-      <Content store = {store}/>
+      <div>
+        <Header/>
+        <Body/>        
+      </div>
     )
   }
 }

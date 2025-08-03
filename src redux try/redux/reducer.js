@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const Creducer = createSlice({
-    name: 'reducer',
+    name: 'counter',
     initialState: {
         value:0
     },

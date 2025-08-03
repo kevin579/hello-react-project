@@ -1,3 +1,7 @@
-import {createStore} from 'redux'
-import reducer from './reducer'
-export default createStore(reducer)
+import { configureStore } from "@reduxjs/toolkit";
+import configItem from './reducers/configItem'
+export default configureStore({
+    reducer:{
+        configItem: configItem
+    }
+})

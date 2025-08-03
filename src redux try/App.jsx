@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import {increment, incrementPro } from './redux/reducer'
 import { connect } from 'react-redux'
 class App extends Component {
-  // componentDidMount(){
-  //   store.subscribe(()=>{
-  //     this.setState({})
-  //   })
-  // }
+
   render() {
     
     const {count,increment,incrementPro} = this.props; 
